@@ -2,7 +2,11 @@ const express = require('express')
 const cors = require('cors')
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb')
 const app = express()
-app.use(cors())
+
+const corsOptions = {
+    origin: 'https://silver-tapioca-1ea94f.netlify.app'
+  };
+app.use(cors(corsOptions))
 
 const PORT = 3001 || process.env.PORT
 
